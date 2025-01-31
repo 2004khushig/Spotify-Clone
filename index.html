@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <title>Spotify - Web Player: Music for Everyone</title>
+</head>
+
+<body>
+
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="close">
+                <img class="invert" src="cross.svg" alt="">
+            </div>
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="logo">
+                    <img class="invert" width=110px src="logo.svg" alt="Spotify Logo">
+                </div>
+                <ul>
+                    <li><img class="invert" src="home.svg" alt="Home Icon">Home</li>
+                    <li><img class="invert" src="search.svg" alt="Search Icon">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="headerlist.svg" alt="Playlist Icon">
+                    <h2>Your Library</h2>
+                </div>
+                
+                <div class="songList">
+                    <ul>
+                        <!-- Songs will be dynamically inserted here -->
+                    </ul>
+                </div>
+
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/in-en/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/"><span>Safety & Privacy
+                                Center</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                    </div>
+                    <!-- <div><a href="https://www.spotify.com/in-en/accessibility/"><span>Accessibility</span></a></div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="right bg-grey rounded">
+            <div class="header">
+                <div class="nav">
+                    <div class="hamburgerCont">
+                        <img class="invert hamburger" src="hamburger.svg" alt="">
+                        <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m15 6-5.29289 5.2929c-.33334.3333-.5.5-.5.7071s.16666.3738.5.7071l5.29289 5.2929"
+                                stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                        </svg>
+                        <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m9 18 5.2929-5.2929c.3333-.3333.5-.5.5-.7071s-.1667-.3738-.5-.7071l-5.2929-5.2929"
+                                stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="signbtn">Sign up</button>
+                    <button class="loginbtn">Login</button>
+                </div>
+            </div>
+            <div class="spotifyPlaylist">
+                <h2>Spotify Playlists</h2>
+                <div class="cardContainer">
+                    <!-- <div data-folder="arijit" class="card">
+                        <img src="https://seed-mix-image.spotifycdn.com/v6/img/artist/4YRxDV8wJFPHPTeXepOstw/en/default"
+                            alt="Arijit Singh Radio">
+                        <div class="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" fill="#000000" />
+                            </svg>
+                        </div>
+                        <h3>Arijit Singh Radio</h3>
+                        <p>By Spotify</p>
+                    </div> -->
+
+                    <!-- <div data-folder="taylor" class="card">
+
+                        <img src="https://i.scdn.co/image/ab67706f0000000252feef11af8c9d412769ec5a"
+                            alt="This is Taylor Swift">
+                        <div class="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" fill="#000000" />
+                            </svg>
+                        </div>
+                        <h3>This is Taylor Swift</h3>
+                        <p>By Spotify</p>
+                    </div> -->
+                    <!-- <div data-folder="karan" class="card">
+
+                        <img src="https://i2o.scdn.co/image/ab67706c0000cfa335c1bd88d6f15e5548814db8"
+                            alt="Karan Aujla New Songs 2024">
+                        <div class="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" fill="#000000" />
+                            </svg>
+                        </div>
+                        <h3>Karan Aujla New Songs 2024</h3>
+                        <p>By Music Box</p>
+                    </div> -->
+                    <!-- <div data-folder="sabrina" class="card">
+
+                        <img src="https://i.scdn.co/image/ab67706f00000002fe765096aa35d7363f2e9056"
+                            alt="Sabrina Carpenter">
+                        <div class="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" fill="#000000" />
+                            </svg>
+                        </div>
+                        <h3>Sabrina Carpenter</h3>
+                        <p>The hottest 50</p>
+                    </div> -->
+                </div>
+                <div class="playbar">
+                    <div class="seekBar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="aboveBar">
+                        <div class="songInfo">
+                            <!-- Song info will be dynamically inserted here -->
+                        </div>
+                        <div class="songButtons">
+                            <img id="previous" src="previous.svg" alt="Previous Track">
+                            <img id="play" src="pause.svg" alt="Play/Pause Track">
+                            <img id="next" src="next.svg" alt="Next Track">
+                        </div>
+                        <div class="volumeworks">
+                            <div class="songTime">
+                                <!-- Song time info will be dynamically inserted here -->
+                            </div>
+                            <div class="volume">
+                                <img width="25px" src="volume.svg" alt="">
+                                <div class="range">
+                                    <input type="range" name="volume">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
